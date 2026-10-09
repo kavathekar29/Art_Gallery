@@ -1,0 +1,326 @@
+
+/* =================================
+   ART GALLERY - COMMON CSS
+   File name: style.css
+================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    color: #ffffff;
+    background:
+        linear-gradient(rgba(15, 12, 25, 0.83),
+                        rgba(15, 12, 25, 0.90)),
+        url('https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=1920&q=85');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    line-height: 1.7;
+}
+
+/* Main page headings */
+center {
+    display: block;
+    padding: 30px 20px;
+}
+
+h1 {
+    color: #ffbd69;
+    font-size: clamp(30px, 5vw, 48px);
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    text-shadow: 0 0 20px rgba(255, 189, 105, 0.25);
+}
+
+h2 {
+    color: #ffd09b;
+    font-size: 28px;
+    margin: 25px 0 18px;
+}
+
+h3 {
+    color: #ffbd69;
+    margin: 20px 0 10px;
+}
+
+p {
+    color: #e8e3ee;
+    margin: 10px 0;
+}
+
+/* Horizontal lines */
+hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        #dca96b,
+        transparent
+    );
+    margin: 22px auto;
+    max-width: 1100px;
+}
+
+/* Navigation menu */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px auto;
+    padding: 15px;
+    background: rgba(20, 16, 30, 0.75);
+    border: 1px solid rgba(255, 189, 105, 0.25);
+    border-radius: 16px;
+    max-width: 850px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation links */
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: linear-gradient(135deg, #f7a84b, #e66c91);
+    color: #1c1424;
+    transform: translateY(-2px);
+}
+
+/* Forms */
+form {
+    max-width: 550px;
+    width: 100%;
+    margin: 25px auto;
+    padding: 30px;
+    text-align: left;
+    background: rgba(27, 22, 39, 0.90);
+    border: 1px solid rgba(255, 189, 105, 0.35);
+    border-radius: 20px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(12px);
+}
+
+/* Form tables */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 12px;
+    margin: 10px auto;
+}
+
+td {
+    padding: 7px;
+    color: #f2edf7;
+    vertical-align: top;
+    text-align: left;
+}
+
+/* Text fields */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #51465f;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.07);
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+/* Placeholder */
+input::placeholder,
+textarea::placeholder {
+    color: #b9b0c5;
+}
+
+/* Dropdown options */
+select option {
+    background: #211a2e;
+    color: #ffffff;
+}
+
+/* Focus effects */
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #ffbd69;
+    box-shadow: 0 0 0 3px rgba(255, 189, 105, 0.15);
+}
+
+/* Text area */
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Radio buttons and checkboxes */
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: #ffbd69;
+    margin: 5px;
+    cursor: pointer;
+}
+
+/* Submit, reset and other buttons */
+input[type="submit"],
+input[type="reset"],
+button {
+    padding: 12px 22px;
+    margin: 8px 5px 0 0;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #ffbd69, #f07b91);
+    color: #241729;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(240, 123, 145, 0.25);
+}
+
+/* Reset button */
+input[type="reset"] {
+    background: transparent;
+    border: 1px solid #ffbd69;
+    color: #ffbd69;
+}
+
+/* Rating stars */
+input[type="radio"] + br {
+    line-height: 2;
+}
+
+/* Images throughout the gallery */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Gallery artwork cards
+   Add class="art-card" to each card */
+.art-card {
+    display: inline-block;
+    width: min(280px, 100%);
+    margin: 15px;
+    padding: 12px;
+    vertical-align: top;
+    background: rgba(35, 28, 47, 0.92);
+    border: 1px solid rgba(255, 189, 105, 0.25);
+    border-radius: 18px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.art-card:hover {
+    transform: translateY(-7px);
+}
+
+.art-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.art-card h3 {
+    margin-top: 12px;
+}
+
+/* Footer */
+footer {
+    padding: 22px 15px;
+    margin-top: 35px;
+    text-align: center;
+    background: rgba(15, 12, 25, 0.85);
+    border-top: 1px solid rgba(255, 189, 105, 0.25);
+}
+
+footer p {
+    font-size: 13px;
+    color: #c9c0d2;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 600px) {
+    center {
+        padding: 20px 12px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    nav {
+        gap: 5px;
+        padding: 10px;
+    }
+
+    nav a {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    form {
+        padding: 18px;
+    }
+
+    td {
+        padding: 5px;
+        font-size: 13px;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+        padding: 10px 15px;
+    }
+
+    body {
+        background-attachment: scroll;
+    }
+}
